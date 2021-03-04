@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
-class ActivatedRouter {
-}
+
 
 @Component({
   selector: 'app-authentication',
@@ -10,14 +9,24 @@ class ActivatedRouter {
   styleUrls: ['./authentication.component.css']
 })
 export class AuthenticationComponent implements OnInit {
+  public error: boolean;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.error =true;
   }
 
 
   signIn(): void {
-    this.router.navigate(['/main'], { queryParams: {} });
+    let authenticated: boolean;
+    authenticated=true;
+    if(authenticated){
+      this.router.navigate(['/main'], { queryParams: {} });
+    }
+    else{
+      this.error = false;
+    }
+
   }
 }
