@@ -8,6 +8,14 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { BodyComponent } from './shared/components/body/body.component';
 import { MainComponent } from './layout/main/main.component';
+import { AjouterOrphelinComponent } from './shared/components/ajouter-orphelin/ajouter-orphelin.component';
+import { AjouterVeuveComponent } from './shared/components/ajouter-veuve/ajouter-veuve.component';
+import { RechercheVeuveComponent } from './shared/components/recherche-veuve/recherche-veuve.component';
+import { RechercheOrphelinComponent } from './shared/components/recherche-orphelin/recherche-orphelin.component';
+import { ParrainComponent } from './shared/components/parrain/parrain.component';
+import { TransactionComponent } from './shared/components/transaction/transaction.component';
+import { AjouterDonneurComponent } from './shared/components/ajouter-donneur/ajouter-donneur.component';
+import { VerserTransactionComponent } from './shared/components/verser-transaction/verser-transaction.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +24,15 @@ import { MainComponent } from './layout/main/main.component';
     HeaderComponent,
     FooterComponent,
     BodyComponent,
-    MainComponent
+    MainComponent,
+    AjouterOrphelinComponent,
+    AjouterVeuveComponent,
+    RechercheVeuveComponent,
+    RechercheOrphelinComponent,
+    ParrainComponent,
+    TransactionComponent,
+    AjouterDonneurComponent,
+    VerserTransactionComponent
   ],
   imports: [
     BrowserModule,
