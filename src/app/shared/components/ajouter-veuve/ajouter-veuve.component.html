@@ -5,79 +5,92 @@
          <form>
            <div class="row">
              <div class="col">
-               <label>Nom</label> <input [(ngModel)]="nom" type="text" class="form-control" >
+               <label>Nom</label> <input name="nom" [(ngModel)]="nom" type="text" class="form-control" >
              </div>
              <div class="col">
-               <label>Prenom</label> <input [(ngModel)]="prenom" type="text" class="form-control" >
+               <label>Prenom</label> <input name="prenom"[(ngModel)]="prenom" type="text" class="form-control" >
+               <br>
              </div>
-             <label>Date de naissance</label> <input [(ngModel)]="dateDeNaissance" type="text" class="form-control" >
            </div>
-           <br>
+           <p>Date de Naissance</p><br>
            <div class="row">
              <div class="col">
-               <label>Adresse</label> <input [(ngModel)]="adresse" type="text" class="form-control" >
+               <label>Jour</label> <input name="jourNaissance" [(ngModel)]="jourNaissance" type="text" class="form-control" >
              </div>
              <div class="col">
-               <label>Numéro de Tel</label> <input [(ngModel)]="numTel" type="text" class="form-control" >
+               <label>Mois</label> <input name="moisNaissance" [(ngModel)]="moisNaissance" type="text" class="form-control" >
+               <br>
+             </div>
+             <div class="col">
+               <label>Année</label> <input name="anneeNaissance" [(ngModel)]="anneeNaissance" type="text" class="form-control" >
+               <br>
+             </div>
+           </div>
+
+           <div class="row">
+             <div class="col">
+               <label>Adresse</label> <input name="adresse" [(ngModel)]="adresse" type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>Numéro de Tel</label> <input name="numTel" [(ngModel)]="numTel" type="text" class="form-control" >
              </div>
            </div><br>
            <div class="row">
              <div class="col">
-               <label>CIN</label>  <input [(ngModel)]="cin" type="text" class="form-control" >
+               <label>CIN</label>  <input name="cin" [(ngModel)]="cin" type="text" class="form-control" >
              </div>
              <div class="col">
-               <label>RIB</label> <input [(ngModel)]="rib" type="text" class="form-control" >
+               <label>RIB</label> <input name="rib" [(ngModel)]="rib" type="text" class="form-control" >
              </div><br>
            </div>
            <div class="row">
              <div class="col">
-               <label>Date d'ouverture du dossier</label>  <input [(ngModel)]="dateOuvertureDossier" type="text" class="form-control" >
+               <label>Date d'ouverture du dossier</label>  <input name="dateOuvertureDossier" [(ngModel)]="dateOuvertureDossier" type="text" class="form-control" >
              </div>
              <div class="col">
-               <label>Niveau scolaire</label> <input [(ngModel)]="niveauScolaire"  type="text" class="form-control" >
-             </div>
-           </div><br>
-           <div class="row">
-             <div class="col">
-               <label>Info Travail</label> <input [(ngModel)]="infoTravail"  type="text" class="form-control" >
-             </div>
-             <div class="col">
-               <label>Revenu mensuel</label> <input [(ngModel)]="revenueMonsuel"  type="text" class="form-control" >
+               <label>Niveau scolaire</label> <input name="niveauScolaire" [(ngModel)]="niveauScolaire"  type="text" class="form-control" >
              </div>
            </div><br>
            <div class="row">
              <div class="col">
-               <label>Montant d'aide monsuelle</label> <input [(ngModel)]="montantAideMonsuelle"  type="text" class="form-control" >
+               <label>Info Travail</label> <input name="infoTravail" [(ngModel)]="infoTravail"  type="text" class="form-control" >
              </div>
              <div class="col">
-               <label>Situation sanitaire</label> <input [(ngModel)]="siutationSanitaire"  type="text" class="form-control" >
-             </div>
-           </div><br>
-           <div class="row">
-             <div class="col">
-               <label>Type de couverture sociale</label> <input [(ngModel)]="typeCouvertureSociale"  type="text" class="form-control" >
-             </div>
-             <div class="col">
-               <label>Cout des médicaments</label> <input [(ngModel)]="coutMedicaments"  type="text" class="form-control" >
+               <label>Revenu mensuel</label> <input name="revenueMonsuel" [(ngModel)]="revenueMonsuel"  type="text" class="form-control" >
              </div>
            </div><br>
            <div class="row">
              <div class="col">
-               <label>Nombre d'enfants</label> <input [(ngModel)]="nombreEnfants"  type="text" class="form-control" >
+               <label>Montant d'aide monsuelle</label> <input name="montantAideMonsuelle" [(ngModel)]="montantAideMonsuelle"  type="text" class="form-control" >
              </div>
              <div class="col">
-               <label>Nombre d'enfants pris en charge:</label> <input [(ngModel)]="nombreEnfantsParrainees"  type="text" class="form-control" >
+               <label>Situation sanitaire</label> <input name="siutationSanitaire" [(ngModel)]="siutationSanitaire"  type="text" class="form-control" >
              </div>
            </div><br>
            <div class="row">
              <div class="col">
-               <label>Date de déces de l'époux</label> <input [(ngModel)]="dateDecesMari" type="text" class="form-control" >
+               <label>Type de couverture sociale</label> <input name="typeCouvertureSociale" [(ngModel)]="typeCouvertureSociale"  type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>Cout des médicaments</label> <input name="coutMedicaments" [(ngModel)]="coutMedicaments"  type="text" class="form-control" >
+             </div>
+           </div><br>
+           <div class="row">
+             <div class="col">
+               <label>Nombre d'enfants</label> <input name="nombreEnfants" [(ngModel)]="nombreEnfants"  type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>Nombre d'enfants pris en charge:</label> <input name="nombreEnfantsParrainees" [(ngModel)]="nombreEnfantsParrainees"  type="text" class="form-control" >
+             </div>
+           </div><br>
+           <div class="row">
+             <div class="col">
+               <label>Date de déces de l'époux</label> <input name="dateDecesMari" [(ngModel)]="dateDecesMari" type="text" class="form-control" >
              </div>
            </div>
            <br>
-           <button type="submit" class="btn btn-primary">Envoyer</button>
+           <button (click)="submit()" type="submit" class="btn btn-primary">Envoyer</button>
            </form>
-
      </div>
    </div>
  </div>

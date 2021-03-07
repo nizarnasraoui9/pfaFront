@@ -32,10 +32,6 @@ export class AuthenticationComponent implements OnInit {
 
 
   signIn(): void {
-    let username: string;
-    let password: string;
-    username = 'ali';
-    password = '0000';
     let path: string;
     path = 'http://localhost:8080/admin/' + this.username + '/' + this.password;
     console.log(path);

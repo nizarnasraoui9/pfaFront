@@ -24,10 +24,16 @@ export class AjouterVeuveComponent implements OnInit {
   nombreEnfants: number;
   nombreEnfantsParrainees: number;
   dateDecesMari: string;
+  jourNaissance: string;
+  moisNaissance: string;
+  anneeNaissance: string;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  submit() {
+    console.log(this.nom);
+  }
 }
