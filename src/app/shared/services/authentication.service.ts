@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Parrain} from '../models/Parrain';
-import {Veuve} from '../models/Veuve';
+import {Observable, of} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class VeuveServiceService {
+export class AuthenticationService {
 
+  constructor(private http: HttpClient) {
+  }
 
 }

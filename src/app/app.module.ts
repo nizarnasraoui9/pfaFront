@@ -16,6 +16,8 @@ import { ParrainComponent } from './shared/components/parrain/parrain.component'
 import { TransactionComponent } from './shared/components/transaction/transaction.component';
 import { AjouterDonneurComponent } from './shared/components/ajouter-donneur/ajouter-donneur.component';
 import { VerserTransactionComponent } from './shared/components/verser-transaction/verser-transaction.component';
+import { RechercheComponent } from './shared/components/recherche/recherche.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,11 +34,13 @@ import { VerserTransactionComponent } from './shared/components/verser-transacti
     ParrainComponent,
     TransactionComponent,
     AjouterDonneurComponent,
-    VerserTransactionComponent
+    VerserTransactionComponent,
+    RechercheComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
