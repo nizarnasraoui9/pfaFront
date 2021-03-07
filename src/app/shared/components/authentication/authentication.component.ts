@@ -12,6 +12,8 @@ import {of} from 'rxjs';
 })
 export class AuthenticationComponent implements OnInit {
   public error: boolean;
+  username: string;
+  password: string;
 
   constructor(private router: Router, private http: HttpClient) { }
 
@@ -35,7 +37,7 @@ export class AuthenticationComponent implements OnInit {
     username = 'ali';
     password = '0000';
     let path: string;
-    path = 'http://localhost:8080/admin/' + username + '/' + password;
+    path = 'http://localhost:8080/admin/' + this.username + '/' + this.password;
     console.log(path);
     const obs = this.http.get(path);
     obs.subscribe((response) => {

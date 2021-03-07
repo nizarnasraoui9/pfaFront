@@ -7,12 +7,14 @@ import {BodyComponent} from './shared/components/body/body.component';
 import {RechercheComponent} from './shared/components/recherche/recherche.component';
 import {AppComponent} from './app.component';
 import {AuthenticationComponent} from './shared/components/authentication/authentication.component';
+import {AjouterVeuveComponent} from './shared/components/ajouter-veuve/ajouter-veuve.component';
 
 const routes: Routes = [
   {path: 'signIn', component: AuthenticationComponent},
   {path: 'main', component: MainComponent,
     children: [
       {path: '', redirectTo: 'body', pathMatch: 'full'},
+      {path: 'ajouterDossier', component: AjouterVeuveComponent},
       {path: 'body', component: BodyComponent},
       {path: 'recherche', component: RechercheComponent},
       {path: 'ajouterDonneur', component: AjouterDonneurComponent},

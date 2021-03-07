@@ -18,6 +18,8 @@ import { AjouterDonneurComponent } from './shared/components/ajouter-donneur/ajo
 import { VerserTransactionComponent } from './shared/components/verser-transaction/verser-transaction.component';
 import { RechercheComponent } from './shared/components/recherche/recherche.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
+import { AjouterDossierComponent } from './shared/components/ajouter-dossier/ajouter-dossier.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +37,14 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     TransactionComponent,
     AjouterDonneurComponent,
     VerserTransactionComponent,
-    RechercheComponent
+    RechercheComponent,
+    AjouterDossierComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
