@@ -1,24 +1,21 @@
-export interface Veuve{
-  id: number ;
+export class Veuve{
+
   CIN: number;
-  number;
-  dateOuvertureDossier: Date;
+  dateOuvertureDossier: string;
   nom: string;
   prenom: string;
-  dateDeNaissanc: Date;
+  dateDeNaissance: string;
   numTel: number;
   adresse: string;
   niveauScolaire: string;
-  typeTravaille: string;
-  situationTravaille: string;
+  infoTravail: string;
   revenueMonsuel: number;
   montantAideMonsuelle: number;
   siutationSanitaire: string;
   typeCouvertureSociale: string;
   coutMedicaments: number;
-
   nombreEnfants: number;
   nombreEnfantsParrainees: number;
   RIB: number;
-  dateDecesMari: Date;
+  dateDecesMari: string;
 }
