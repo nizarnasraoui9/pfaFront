@@ -1,87 +1,84 @@
- <form>
-    <div class="row">
-      <div class="col">
-        <label>Nom</label> <input type="text" class="form-control" >
-      </div>
-      <div class="col">
-        <label>Prenom</label> <input type="text" class="form-control" >
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <label>Adresse</label> <input type="text" class="form-control" >
-      </div>
-      <div class="col">
-        <label>Numéro de Tel</label> <input type="text" class="form-control" >
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <label>Date d'ouverture du dossier</label> <input type="text" class="form-control" >
-      </div>
-      <div class="col">
-        <label>Niveau scolaire</label> <input type="text" class="form-control" >
-      </div>
-    </div>
-   <div class="row">
-     <div class="col">
-       <label>Info Travail</label> <input type="text" class="form-control" >
-     </div>
-     <div class="col">
-       <label>Revenu mensuel</label> <input type="text" class="form-control" >
-     </div>
-   </div>
-   <div class="row">
-     <div class="col">
-       <label>Montant d'aide monsuelle</label> <input type="text" class="form-control" >
-     </div>
-     <div class="col">
-       <label>Situation sanitaire</label> <input type="text" class="form-control" >
-     </div>
-   </div>
-   <div class="row">
-     <div class="col">
-       <label>Type de couverture sociale</label> <input type="text" class="form-control" >
-     </div>
-     <div class="col">
-       <label>Cout des médicaments</label> <input type="text" class="form-control" >
-     </div>
-   </div>
-   <div class="row">
-     <div class="col">
-       <label>Nombre d'enfants</label> <input type="text" class="form-control" >
-     </div>
-     <div class="col">
-       <label>Nombre d'enfants pris en charge:</label> <input type="text" class="form-control" >
-     </div>
-   </div>
-   <div class="row">
-     <div class="col">
-       <label>Date de déces de l'époux</label> <input type="text" class="form-control" >
-     </div>
-   </div>
-  </form>
+ <div class="row">
+   <div class="col-sm-10">
+     <div class="card">
+       <div class="card-body">
+         <form>
+           <div class="row">
+             <div class="col">
+               <label>Nom</label> <input [(ngModel)]="nom" type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>Prenom</label> <input [(ngModel)]="prenom" type="text" class="form-control" >
+             </div>
+             <label>Date de naissance</label> <input [(ngModel)]="dateDeNaissance" type="text" class="form-control" >
+           </div>
+           <br>
+           <div class="row">
+             <div class="col">
+               <label>Adresse</label> <input [(ngModel)]="adresse" type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>Numéro de Tel</label> <input [(ngModel)]="numTel" type="text" class="form-control" >
+             </div>
+           </div><br>
+           <div class="row">
+             <div class="col">
+               <label>CIN</label>  <input [(ngModel)]="cin" type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>RIB</label> <input [(ngModel)]="rib" type="text" class="form-control" >
+             </div><br>
+           </div>
+           <div class="row">
+             <div class="col">
+               <label>Date d'ouverture du dossier</label>  <input [(ngModel)]="dateOuvertureDossier" type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>Niveau scolaire</label> <input [(ngModel)]="niveauScolaire"  type="text" class="form-control" >
+             </div>
+           </div><br>
+           <div class="row">
+             <div class="col">
+               <label>Info Travail</label> <input [(ngModel)]="infoTravail"  type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>Revenu mensuel</label> <input [(ngModel)]="revenueMonsuel"  type="text" class="form-control" >
+             </div>
+           </div><br>
+           <div class="row">
+             <div class="col">
+               <label>Montant d'aide monsuelle</label> <input [(ngModel)]="montantAideMonsuelle"  type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>Situation sanitaire</label> <input [(ngModel)]="siutationSanitaire"  type="text" class="form-control" >
+             </div>
+           </div><br>
+           <div class="row">
+             <div class="col">
+               <label>Type de couverture sociale</label> <input [(ngModel)]="typeCouvertureSociale"  type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>Cout des médicaments</label> <input [(ngModel)]="coutMedicaments"  type="text" class="form-control" >
+             </div>
+           </div><br>
+           <div class="row">
+             <div class="col">
+               <label>Nombre d'enfants</label> <input [(ngModel)]="nombreEnfants"  type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>Nombre d'enfants pris en charge:</label> <input [(ngModel)]="nombreEnfantsParrainees"  type="text" class="form-control" >
+             </div>
+           </div><br>
+           <div class="row">
+             <div class="col">
+               <label>Date de déces de l'époux</label> <input [(ngModel)]="dateDecesMari" type="text" class="form-control" >
+             </div>
+           </div>
+           <br>
+           <button type="submit" class="btn btn-primary">Envoyer</button>
+           </form>
 
-  <!--
-  {
-    "numDossier": 0,
-    "dateOuvertureDossier": null,
-    "nom": "ali",
-    "prenom": "ali",
-    "dateDeNaissance": null,
-    "numTel": 0,
-    "adresse": "",
-    "niveauScolaire": "",
-    "typeTravaille": "",
-    "situationTravaille": "",
-    "revenueMonsuel": 0.0,
-    "montantAideMonsuelle": 0.0,
-    "siutationSanitaire": "",
-    "typeCouvertureSociale": "",
-    "coutMedicaments": 0.0,
-    "nombreEnfants": 0,
-    "nombreEnfantsParrainees": 0,
-    "dateDecesMari": null,
-    "rib": 0,
-    "cin": 0,
-  -->
+     </div>
+   </div>
+ </div>
+
