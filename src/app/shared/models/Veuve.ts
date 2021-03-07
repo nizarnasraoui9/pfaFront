@@ -1,10 +1,10 @@
 export class Veuve{
 
-  CIN: number;
+  CIN: string;
   dateOuvertureDossier: string;
   nom: string;
   prenom: string;
-  dateDeNaissance: string;
+  dateDeNaissance: any;
   numTel: number;
   adresse: string;
   niveauScolaire: string;

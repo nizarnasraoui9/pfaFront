@@ -18,7 +18,7 @@ export class AjouterVeuveComponent implements OnInit {
   dateDeNaissance: string;
   adresse: string;
   numTel: number;
-  cin: number;
+  cin: string;
   rib: number;
   dateOuvertureDossier: string;
   niveauScolaire: string;
@@ -47,13 +47,12 @@ export class AjouterVeuveComponent implements OnInit {
   }
 
   submit() {
-    console.log(this.nom);
     let veuve: Veuve = {
       CIN : this.cin,
-      dateOuvertureDossier: '2015' + '-' + '03' + '-' + '31' ,
+      dateOuvertureDossier: this.anneeOuverture + '-' + this.moisOuverture + '-' + this.jourOuverture ,
       nom: this.nom,
       prenom: this.prenom,
-      dateDeNaissance: '2015-03-31',
+      dateDeNaissance: this.anneeNaissance + '-' + this.moisNaissance + '-' + this.jourNaissance,
       numTel: 0,
       adresse: this.adresse,
       niveauScolaire: this.niveauScolaire,
@@ -66,10 +65,9 @@ export class AjouterVeuveComponent implements OnInit {
       nombreEnfants: this.nombreEnfants,
       nombreEnfantsParrainees: this.nombreEnfantsParrainees,
       RIB: this.rib,
-      dateDecesMari: ''
+      dateDecesMari: this.anneeDeces + '-' + this.moisDeces + '-' + this.jourDeces
     };
 
-    console.log(JSON.stringify(veuve));
     this.http.post<any>('http://localhost:8080/veuve', veuve)
     .subscribe(response => {
       console.log(response);
