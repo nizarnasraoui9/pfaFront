@@ -43,15 +43,25 @@
                <label>RIB</label> <input name="rib" [(ngModel)]="rib" type="text" class="form-control" >
              </div><br>
            </div>
+           <p>Date d'Ouverture du Dossier</p><br>
            <div class="row">
              <div class="col">
-               <label>Date d'ouverture du dossier</label>  <input name="dateOuvertureDossier" [(ngModel)]="dateOuvertureDossier" type="text" class="form-control" >
+               <label>Jour</label> <input name="jourOuverture" [(ngModel)]="jourOuverture" type="text" class="form-control" >
              </div>
              <div class="col">
-               <label>Niveau scolaire</label> <input name="niveauScolaire" [(ngModel)]="niveauScolaire"  type="text" class="form-control" >
+               <label>Mois</label> <input name="moisOuverture" [(ngModel)]="moisOuverture" type="text" class="form-control" >
+               <br>
              </div>
-           </div><br>
+             <div class="col">
+               <label>Année</label> <input name="anneeOuverture" [(ngModel)]="anneeOuverture" type="text" class="form-control" >
+               <br>
+             </div>
+           </div>
+           <br>
            <div class="row">
+             <div class="col">
+               <label>Niveau educatif</label> <input name="niveauScolaire" [(ngModel)]="niveauScolaire"  type="text" class="form-control" >
+             </div>
              <div class="col">
                <label>Info Travail</label> <input name="infoTravail" [(ngModel)]="infoTravail"  type="text" class="form-control" >
              </div>
@@ -83,9 +93,18 @@
                <label>Nombre d'enfants pris en charge:</label> <input name="nombreEnfantsParrainees" [(ngModel)]="nombreEnfantsParrainees"  type="text" class="form-control" >
              </div>
            </div><br>
+           <p>Date de décès de l'époux</p><br>
            <div class="row">
              <div class="col">
-               <label>Date de déces de l'époux</label> <input name="dateDecesMari" [(ngModel)]="dateDecesMari" type="text" class="form-control" >
+               <label>Jour</label> <input name="jourDeces" [(ngModel)]="jourDeces" type="text" class="form-control" >
+             </div>
+             <div class="col">
+               <label>Mois</label> <input name="moisDeces" [(ngModel)]="moisDeces" type="text" class="form-control" >
+               <br>
+             </div>
+             <div class="col">
+               <label>Année</label> <input name="anneeDeces" [(ngModel)]="anneeDeces" type="text" class="form-control" >
+               <br>
              </div>
            </div>
            <br>

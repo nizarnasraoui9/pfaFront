@@ -18,8 +18,8 @@ export class AjouterVeuveComponent implements OnInit {
   dateDeNaissance: string;
   adresse: string;
   numTel: number;
-  cin: string;
-  rib: string;
+  cin: number;
+  rib: number;
   dateOuvertureDossier: string;
   niveauScolaire: string;
   infoTravail: string;
@@ -34,6 +34,12 @@ export class AjouterVeuveComponent implements OnInit {
   jourNaissance: string;
   moisNaissance: string;
   anneeNaissance: string;
+  jourDeces: string;
+  moisDeces: string;
+  anneeDeces: string;
+  jourOuverture: string;
+  moisOuverture: string;
+  anneeOuverture: string;
 
   constructor(private http: HttpClient) { }
 
@@ -43,23 +49,23 @@ export class AjouterVeuveComponent implements OnInit {
   submit() {
     console.log(this.nom);
     let veuve: Veuve = {
-      CIN: 0,
-      dateOuvertureDossier: '2015-03-31',
-      nom: 'ali',
-      prenom: 'ali',
+      CIN : this.cin,
+      dateOuvertureDossier: '2015' + '-' + '03' + '-' + '31' ,
+      nom: this.nom,
+      prenom: this.prenom,
       dateDeNaissance: '2015-03-31',
       numTel: 0,
-      adresse: '',
-      niveauScolaire: '',
-      infoTravail: 'aaa',
-      revenueMonsuel: 0,
-      montantAideMonsuelle: 0,
-      siutationSanitaire: '',
-      typeCouvertureSociale: '',
-      coutMedicaments: 0,
-      nombreEnfants: 0,
-      nombreEnfantsParrainees: 0,
-      RIB: 0,
+      adresse: this.adresse,
+      niveauScolaire: this.niveauScolaire,
+      infoTravail: this.infoTravail,
+      revenueMonsuel: this.revenueMonsuel,
+      montantAideMonsuelle: this.montantAideMonsuelle,
+      siutationSanitaire: this.siutationSanitaire,
+      typeCouvertureSociale: this.typeCouvertureSociale,
+      coutMedicaments: this.coutMedicaments,
+      nombreEnfants: this.nombreEnfants,
+      nombreEnfantsParrainees: this.nombreEnfantsParrainees,
+      RIB: this.rib,
       dateDecesMari: ''
     };
 
@@ -71,3 +77,24 @@ export class AjouterVeuveComponent implements OnInit {
 
   }
 }
+ /*
+ let veuve: Veuve = {
+      CIN : this.cin,
+      dateOuvertureDossier: this.anneeOuverture + '-' + this.moisOuverture + '-' + this.jourOuverture ,
+      nom: this.nom,
+      prenom: this.prenom,
+      dateDeNaissance: this.anneeNaissance + '-' + this.moisNaissance + '-' + this.jourNaissance ,
+      numTel: this.numTel,
+      adresse: this.adresse,
+      niveauScolaire: this.niveauScolaire,
+      infoTravail: this.infoTravail,
+      revenueMonsuel: this.revenueMonsuel,
+      montantAideMonsuelle: this.montantAideMonsuelle,
+      siutationSanitaire: this.siutationSanitaire,
+      typeCouvertureSociale: this.typeCouvertureSociale,
+      coutMedicaments: this.coutMedicaments,
+      nombreEnfants: this.nombreEnfants,
+      nombreEnfantsParrainees: this.nombreEnfantsParrainees,
+      RIB: this.rib,
+      dateDecesMari: this.anneeDeces + '-' + this.moisDeces + '-' + this.jourDeces
+    };*/
