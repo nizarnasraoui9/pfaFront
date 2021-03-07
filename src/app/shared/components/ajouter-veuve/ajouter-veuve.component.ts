@@ -64,7 +64,7 @@ export class AjouterVeuveComponent implements OnInit {
     };
 
     console.log(JSON.stringify(veuve));
-    this.http.post<Veuve>('localhost:8080/veuve', JSON.stringify(veuve), httpOptions)
+    this.http.post<any>('http://localhost:8080/veuve', veuve)
     .subscribe(response => {
       console.log(response);
     });
