@@ -18,7 +18,7 @@
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="Nom d'utilisateur">
       <input type="text" id="password" class="fadeIn third" name="login" placeholder="Mot de passe">
       <input type="button" class="fadeIn fourth" value="Se connecter" (click)="signIn()">
-        <div [hidden]="error" class="alert alert-danger" role="alert">
+        <div *ngIf="error" class="alert alert-danger" role="alert">
           Verifier vos paramètres
       </div>
     </form>
