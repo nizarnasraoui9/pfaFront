@@ -1,6 +1,6 @@
 export class Veuve{
 
-  CIN: string;
+  cin: number;
   dateOuvertureDossier: string;
   nom: string;
   prenom: string;
@@ -16,6 +16,6 @@ export class Veuve{
   coutMedicaments: number;
   nombreEnfants: number;
   nombreEnfantsParrainees: number;
-  RIB: number;
-  dateDecesMari: string;
+  rib: number;
+  dateDecesMari: any;
 }

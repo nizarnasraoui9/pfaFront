@@ -1,11 +1,9 @@
 export interface Orphelin {
-  id: number ;
-  CIN: number;
-  number;
+  cin: number;
   dateOuvertureDossier: string;
   nom: string;
   prenom: string;
-  dateDeNaissance: string;
+  dateDeNaissance: any;
   numTel: number;
   adresse: string;
   niveauScolaire: string;
@@ -17,6 +15,4 @@ export interface Orphelin {
   coutMedicaments: number;
   sexe: string;
   situationConjugale: string;
-  etudie: boolean;
-  parraine: boolean;
 }
