@@ -43,7 +43,6 @@ export class AuthenticationComponent implements OnInit {
       else{
         this.error =  true;
       }
-
     });
   }
 }
