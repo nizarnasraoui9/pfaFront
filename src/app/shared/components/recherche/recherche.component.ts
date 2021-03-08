@@ -21,16 +21,15 @@ export class RechercheComponent implements OnInit {
     let tab: object[];
     let path: string;
     path = 'http://localhost:8080/recherche/ali/ali';
-    const obs = this.http.get(path);
+    let obs = this.http.get(path);
     obs.subscribe((response) => {
       this.result = response;
       console.log(this.result[0]);
-      let i = 0;
-      while ( response[i]){
-        //console.log(response[i]);
-        i++;
-      }
     });
+
+  }
+
+  viewPerson(i: object) {
 
   }
 }

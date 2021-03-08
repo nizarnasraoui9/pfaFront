@@ -1,26 +1,10 @@
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-  <label class="form-check-label" for="exampleRadios1">
-    Veuve
-  </label>
-</div>
-<div class="form-check">
-  <input [name]="veuve" [(ngModel)]="veuve" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-  <label class="form-check-label" for="exampleRadios2">
-    Orphelin
-  </label>
-</div>
-
-<br>
 <form class="form-inline my-2 my-lg-0">
-
   <input name="nom" [(ngModel)]="nom" class="form-control mr-sm-2" type="search" placeholder="Nom" aria-label="Search">
   <input name="prenom" [(ngModel)]="prenom" class="form-control mr-sm-2" type="search" placeholder="Prenom" aria-label="Search">
   <button (click)="search()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
 </form><br>
 
 <div *ngIf="result">
-  <p>result</p>
     <table class="table">
       <thead>
       <tr>
@@ -28,6 +12,7 @@
         <th scope="col">Nom</th>
         <th scope="col">Prenom</th>
         <th scope="col">CIN</th>
+        <th scope="col"></th>
       </tr>
       </thead>
       <tbody>
@@ -36,7 +21,7 @@
         <td>{{i.nom}}</td>
         <td>{{i.prenom}}</td>
         <td>{{i.cin}}</td>
-        <button type="button" class="btn btn-link">Afficher les Détails</button>      </tr>
+        <td><button (click)="viewPerson(i)" type="button" class="btn btn-link">Afficher les Détails</button> </td>     </tr>
       </tbody>
     </table>
   </div>

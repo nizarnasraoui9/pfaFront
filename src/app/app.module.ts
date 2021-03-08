@@ -20,6 +20,7 @@ import { RechercheComponent } from './shared/components/recherche/recherche.comp
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { AjouterDossierComponent } from './shared/components/ajouter-dossier/ajouter-dossier.component';
+import { ViewPersonComponent } from './shared/components/view-person/view-person.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { AjouterDossierComponent } from './shared/components/ajouter-dossier/ajo
     AjouterDonneurComponent,
     VerserTransactionComponent,
     RechercheComponent,
-    AjouterDossierComponent
+    AjouterDossierComponent,
+    ViewPersonComponent
   ],
   imports: [
     BrowserModule,
