@@ -10,8 +10,6 @@ import { BodyComponent } from './shared/components/body/body.component';
 import { MainComponent } from './layout/main/main.component';
 import { AjouterOrphelinComponent } from './shared/components/ajouter-orphelin/ajouter-orphelin.component';
 import { AjouterVeuveComponent } from './shared/components/ajouter-veuve/ajouter-veuve.component';
-import { RechercheVeuveComponent } from './shared/components/recherche-veuve/recherche-veuve.component';
-import { RechercheOrphelinComponent } from './shared/components/recherche-orphelin/recherche-orphelin.component';
 import { ParrainComponent } from './shared/components/parrain/parrain.component';
 import { TransactionComponent } from './shared/components/transaction/transaction.component';
 import { AjouterDonneurComponent } from './shared/components/ajouter-donneur/ajouter-donneur.component';
@@ -33,8 +31,6 @@ import { ViewResearchComponent } from './shared/components/view-research/view-re
     MainComponent,
     AjouterOrphelinComponent,
     AjouterVeuveComponent,
-    RechercheVeuveComponent,
-    RechercheOrphelinComponent,
     ParrainComponent,
     TransactionComponent,
     AjouterDonneurComponent,
@@ -42,7 +38,7 @@ import { ViewResearchComponent } from './shared/components/view-research/view-re
     RechercheComponent,
     AjouterDossierComponent,
     ViewPersonComponent,
-    ViewResearchComponent
+    ViewResearchComponent,
   ],
   imports: [
     BrowserModule,

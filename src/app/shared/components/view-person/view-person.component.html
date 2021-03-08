@@ -12,7 +12,7 @@
       </thead>
       <tbody>
       <tr>
-        <th scope="row">{{person.id}}</th>
+        <td>{{person.id}}</td>
         <td>{{person.nom}}</td>
         <td>{{person.prenom}}</td>
         <td>{{person.cin}}</td>
@@ -33,7 +33,7 @@
       </thead>
       <tbody>
       <tr>
-        <th scope="row">{{person.adresse}}</th>
+        <td>{{person.adresse}}</td>
         <td>{{person.infoTravail}}</td>
         <td>{{person.revenueMonsuel}}</td>
         <td>{{person.montantAideMonsuelle}}</td>
@@ -50,7 +50,7 @@
       </thead>
       <tbody>
       <tr>
-        <th scope="row">{{person.siutationSanitaire}}</th>
+        <td>{{person.siutationSanitaire}}</td>
         <td>{{person.typeCouvertureSociale}}</td>
         <td>{{person.coutMedicaments}}</td>
       </tbody>
@@ -67,10 +67,30 @@
         </thead>
         <tbody>
         <tr>
-          <th scope="row">{{person.nombreEnfants}}</th>
+          <td>{{person.nombreEnfants}}</td>
           <td>{{person.nombreEnfantsParrainees}}</td>
           <td>{{person.rib}}</td>
         </tbody>
       </table>
     </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+            <button id="myForm" (click)="uploadImage()" type="file" class="btn btn-primary" (change)="postMethod($event.target.files)">Ajouter Une Image</button>
+        </div>
+        <div class="col-sm">
+          <button type="button" class="btn btn-primary">Ajouter Un Donneur</button>
+        </div>
+        <div class="col-sm">
+          <button type="button" class="btn btn-primary">Ajouter Une image</button>
+        </div>
+      </div>
+    </div>
+    <br>
+<div *ngIf="imagePressed">
+  <form>
+    <input class="btn btn-primary" id="myForm" type="file" name="imageFile" (change)="postMethod($event.target.files)" value="Ajouter une image">
+  </form>
+</div>
 
