@@ -24,11 +24,10 @@ export class RechercheComponent implements OnInit {
     const obs = this.http.get(path);
     obs.subscribe((response) => {
       this.result = response;
-      console.log(response);
-      console.log(typeof(response));
+      console.log(this.result[0]);
       let i = 0;
       while ( response[i]){
-        console.log(response[i]);
+        //console.log(response[i]);
         i++;
       }
     });

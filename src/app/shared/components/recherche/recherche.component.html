@@ -21,7 +21,24 @@
 
 <div *ngIf="result">
   <p>result</p>
-  <div *ngFor="let i of this.result">
-    <p>{{i[0]}}</p>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">CIN</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let i of this.result">
+        <th scope="row">{{i.id}}</th>
+        <td>{{i.nom}}</td>
+        <td>{{i.prenom}}</td>
+        <td>{{i.cin}}</td>
+        <button type="button" class="btn btn-link">Afficher les Détails</button>      </tr>
+      </tbody>
+    </table>
   </div>
-</div>
+
+
