@@ -18,3 +18,10 @@
   <input name="prenom" [(ngModel)]="prenom" class="form-control mr-sm-2" type="search" placeholder="Prenom" aria-label="Search">
   <button (click)="search()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
 </form><br>
+
+<div *ngIf="result">
+  <p>result</p>
+  <div *ngFor="let i of this.result">
+    <p>{{i[0]}}</p>
+  </div>
+</div>

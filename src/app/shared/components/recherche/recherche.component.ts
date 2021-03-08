@@ -9,6 +9,7 @@ import {HttpClient} from '@angular/common/http';
 export class RechercheComponent implements OnInit {
   nom: string;
   prenom: string;
+  result: object;
   veuve: any;
 
   constructor(private http: HttpClient) { }
@@ -17,23 +18,21 @@ export class RechercheComponent implements OnInit {
   }
 
   search() {
+    let tab: object[];
     let path: string;
     path = 'http://localhost:8080/recherche/ali/ali';
-    console.log(path);
-    console.log(this.veuve);
-    console.log(typeof(this.veuve));
     const obs = this.http.get(path);
-    let result: any[];
     obs.subscribe((response) => {
+      this.result = response;
+      console.log(response);
+      console.log(typeof(response));
       let i = 0;
       while ( response[i]){
         console.log(response[i]);
-        result.push(response[i]);
         i++;
       }
-
-
     });
+
   }
 }
  /*
