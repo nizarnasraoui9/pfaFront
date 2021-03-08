@@ -9,6 +9,7 @@ import {AppComponent} from './app.component';
 import {AuthenticationComponent} from './shared/components/authentication/authentication.component';
 import {AjouterVeuveComponent} from './shared/components/ajouter-veuve/ajouter-veuve.component';
 import {AjouterOrphelinComponent} from './shared/components/ajouter-orphelin/ajouter-orphelin.component';
+import {ViewPersonComponent} from './shared/components/view-person/view-person.component';
 
 const routes: Routes = [
   {path: 'signIn', component: AuthenticationComponent},

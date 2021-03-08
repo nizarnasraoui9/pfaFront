@@ -10,11 +10,14 @@ export class RechercheComponent implements OnInit {
   nom: string;
   prenom: string;
   result: object;
-  veuve: any;
+  viewSearch: boolean;
+  viewResult: boolean;
+  selectedPerson: object;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.viewSearch = true;
   }
 
   search() {
@@ -24,12 +27,15 @@ export class RechercheComponent implements OnInit {
     let obs = this.http.get(path);
     obs.subscribe((response) => {
       this.result = response;
-      console.log(this.result[0]);
     });
 
   }
 
   viewPerson(i: object) {
+    this.viewSearch = false;
+    this.selectedPerson = i;
+    this.viewResult = true;
+
 
   }
 }

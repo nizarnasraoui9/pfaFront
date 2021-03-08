@@ -1,1 +1,76 @@
-<p>view-person works!</p>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">CIN</th>
+        <th scope="col">Date de Naissance</th>
+        <th scope="col">Numéro de Tel</th>
+        <th scope="col">Niveau Educatif</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">{{person.id}}</th>
+        <td>{{person.nom}}</td>
+        <td>{{person.prenom}}</td>
+        <td>{{person.cin}}</td>
+        <td>{{person.dateDeNaissance}}</td>
+        <td>{{person.numTel}}</td>
+        <td>{{person.niveauScolaire}}</td>
+      </tbody>
+    </table>
+    <br>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Adresse</th>
+        <th scope="col">Info Travail</th>
+        <th scope="col">revenue Monsuel</th>
+        <th scope="col">Montant d'Aide Monsuelle</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">{{person.adresse}}</th>
+        <td>{{person.infoTravail}}</td>
+        <td>{{person.revenueMonsuel}}</td>
+        <td>{{person.montantAideMonsuelle}}</td>
+      </tbody>
+    </table>
+    <br>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Situation Sanitaire</th>
+        <th scope="col">Couverture Sociale</th>
+        <th scope="col">Cout des Médicaments utilisées</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">{{person.siutationSanitaire}}</th>
+        <td>{{person.typeCouvertureSociale}}</td>
+        <td>{{person.coutMedicaments}}</td>
+      </tbody>
+    </table>
+    <br>
+    <div *ngIf="person.nombreEnfants">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Nombre d'Enfants</th>
+          <th scope="col">Nombre d'Enfants Pris en Charge</th>
+          <th scope="col">RIB</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <th scope="row">{{person.nombreEnfants}}</th>
+          <td>{{person.nombreEnfantsParrainees}}</td>
+          <td>{{person.rib}}</td>
+        </tbody>
+      </table>
+    </div>
+

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-view-person',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-person.component.css']
 })
 export class ViewPersonComponent implements OnInit {
+  @Input() person: any;
 
   constructor() { }
 
   ngOnInit(): void {
+
+    console.log(this.person);
   }
 
 }
