@@ -75,24 +75,3 @@ export class AjouterVeuveComponent implements OnInit {
 
   }
 }
- /*
- let veuve: Veuve = {
-      CIN : this.cin,
-      dateOuvertureDossier: this.anneeOuverture + '-' + this.moisOuverture + '-' + this.jourOuverture ,
-      nom: this.nom,
-      prenom: this.prenom,
-      dateDeNaissance: this.anneeNaissance + '-' + this.moisNaissance + '-' + this.jourNaissance ,
-      numTel: this.numTel,
-      adresse: this.adresse,
-      niveauScolaire: this.niveauScolaire,
-      infoTravail: this.infoTravail,
-      revenueMonsuel: this.revenueMonsuel,
-      montantAideMonsuelle: this.montantAideMonsuelle,
-      siutationSanitaire: this.siutationSanitaire,
-      typeCouvertureSociale: this.typeCouvertureSociale,
-      coutMedicaments: this.coutMedicaments,
-      nombreEnfants: this.nombreEnfants,
-      nombreEnfantsParrainees: this.nombreEnfantsParrainees,
-      RIB: this.rib,
-      dateDecesMari: this.anneeDeces + '-' + this.moisDeces + '-' + this.jourDeces
-    };*/

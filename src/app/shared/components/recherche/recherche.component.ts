@@ -23,7 +23,7 @@ export class RechercheComponent implements OnInit {
   search() {
     let tab: object[];
     let path: string;
-    path = 'http://localhost:8080/recherche/ali/ali';
+    path = 'http://localhost:8080/recherche/' + this.nom + '/' + this.prenom;
     let obs = this.http.get(path);
     obs.subscribe((response) => {
       this.result = response;
@@ -41,7 +41,7 @@ export class RechercheComponent implements OnInit {
 }
  /*
  localhost:8080/recherche/ali/ali
-path = 'http://localhost:8080/recherche/' + this.nom + '/' + this.prenom;
+
  __proto__:
 
   */

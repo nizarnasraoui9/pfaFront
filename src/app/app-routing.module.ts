@@ -10,13 +10,14 @@ import {AuthenticationComponent} from './shared/components/authentication/authen
 import {AjouterVeuveComponent} from './shared/components/ajouter-veuve/ajouter-veuve.component';
 import {AjouterOrphelinComponent} from './shared/components/ajouter-orphelin/ajouter-orphelin.component';
 import {ViewPersonComponent} from './shared/components/view-person/view-person.component';
+import {AjouterDossierComponent} from './shared/components/ajouter-dossier/ajouter-dossier.component';
 
 const routes: Routes = [
   {path: 'signIn', component: AuthenticationComponent},
   {path: 'main', component: MainComponent,
     children: [
       {path: '', redirectTo: 'body', pathMatch: 'full'},
-      {path: 'ajouterDossier', component: AjouterOrphelinComponent},
+      {path: 'ajouterDossier', component: AjouterDossierComponent},
       {path: 'body', component: BodyComponent},
       {path: 'recherche', component: RechercheComponent},
       {path: 'ajouterDonneur', component: AjouterDonneurComponent},

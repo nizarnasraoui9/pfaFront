@@ -1,6 +1,5 @@
 export interface Parrain{
-  parrainId: number;
-  CIN: number;
+  cin: number;
   nom: string ;
   prenom: string;
   telephone: number;
