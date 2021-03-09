@@ -56,6 +56,23 @@
       </tbody>
     </table>
     <br>
+    <table *ngFor="let i of parrain" class="table">
+      <thead>
+      <tr >
+        <th scope="col">Nom du donneur</th>
+        <th scope="col">Prenom du donneur</th>
+        <th scope="col">CIN du donneur</th>
+        <th scope="col">telephone du donneur</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{i.nom}}</td>
+        <td>{{i.prenom}}</td>
+        <td>{{i.cin}}</td>
+        <td>{{i.telephone}}</td>
+      </tbody>
+    </table>
     <div *ngIf="person.nombreEnfants">
       <table class="table">
         <thead>
@@ -72,24 +89,6 @@
           <td>{{person.rib}}</td>
         </tbody>
       </table>
-      <table class="table">
-        <thead>
-        <tr *ngFor="let i of parrain">
-          <th scope="col">Nom du donneur</th>
-          <th scope="col">Prenom du donneur</th>
-          <th scope="col">CIN du donneur</th>
-          <th scope="col">telephone du donneur</th>
-
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>{{i.nom}}</td>
-          <td>{{i.prenom}}</td>
-          <td>{{i.cin}}</td>
-          <td>{{i.telephone}}</td>
-        </tbody>
-      </table>
     </div>
 
     <div class="container">
@@ -98,10 +97,10 @@
             <button id="myForm" (click)="uploadImage()" type="file" class="btn btn-primary" (change)="postMethod($event.target.files)">Ajouter Une Image</button>
         </div>
         <div class="col-sm">
-          <button type="button" class="btn btn-primary">Ajouter Un Donneur</button>
+          <button (click)="addDonneurPressed()" type="button" class="btn btn-primary">Ajouter Un Donneur</button>
         </div>
         <div class="col-sm">
-          <button type="button" class="btn btn-primary">Ajouter Une image</button>
+          <button (click)="viewImages()" type="button" class="btn btn-primary">Afficher les Images</button>
         </div>
       </div>
     </div>
@@ -112,3 +111,38 @@
   </form>
 </div>
 
+<div *ngIf="ajouterDonneurPressed">
+  <div class="row">
+    <div class="col-sm-10">
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col">
+                <label>Nom</label> <input name="nomDonneur" [(ngModel)]="nomDonneur" type="text" class="form-control" >
+              </div>
+              <div class="col">
+                <label>Prenom</label> <input name="prenomDonneur"[(ngModel)]="prenomDonneur" type="text" class="form-control" >
+                <br>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <button (click)="ajouterDonneur()" type="button" class="btn btn-primary">Ajouter Un Donneur</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="viewImage">
+  <img src="assets/img_lights.jpg" class="img-fluid" alt="Responsive image">
+</div>
