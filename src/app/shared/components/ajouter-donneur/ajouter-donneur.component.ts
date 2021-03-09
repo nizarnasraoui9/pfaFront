@@ -19,7 +19,7 @@ export class AjouterDonneurComponent implements OnInit {
   }
 
   submit() {
-    let parrain: Parrain = {
+    let parrain: any = {
       cin : this.cin,
       nom: this.nom,
       prenom: this.prenom,

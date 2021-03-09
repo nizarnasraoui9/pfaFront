@@ -62,7 +62,9 @@
         <th scope="col">Nom du donneur</th>
         <th scope="col">Prenom du donneur</th>
         <th scope="col">CIN du donneur</th>
-        <th scope="col">telephone du donneur</th>
+        <th scope="col">Telephone du donneur</th>
+        <th scope="col">Verser une Transaction</th>
+
       </tr>
       </thead>
       <tbody>
@@ -71,7 +73,14 @@
         <td>{{i.prenom}}</td>
         <td>{{i.cin}}</td>
         <td>{{i.telephone}}</td>
+      <td>
+        <form class="form-inline my-2 my-lg-0">
+        <input name="prenom" [(ngModel)]="montant" class="form-control mr-sm-2" type="search" placeholder="taper le montant ici" aria-label="Search"><br>
+        <button (click)="verserTransaction(i.id)" class="btn btn-outline-success my-2 my-sm-0" type="submit">Verser la transaction</button>
+        </form>
+      </td>
       </tbody>
+
     </table>
     <div *ngIf="person.nombreEnfants">
       <table class="table">
@@ -151,5 +160,5 @@
 </div>
 
 <div *ngIf="viewHistoriqueTransactions">
-
+  <app-transaction-historique [personId]="this.person.id"></app-transaction-historique>
 </div>

@@ -20,6 +20,8 @@ import {FormsModule} from '@angular/forms';
 import { AjouterDossierComponent } from './shared/components/ajouter-dossier/ajouter-dossier.component';
 import { ViewPersonComponent } from './shared/components/view-person/view-person.component';
 import { ViewResearchComponent } from './shared/components/view-research/view-research.component';
+import { TransactionHistoriqueComponent } from './shared/components/transaction-historique/transaction-historique.component';
+import { AddAdminComponent } from './shared/components/add-admin/add-admin.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +41,8 @@ import { ViewResearchComponent } from './shared/components/view-research/view-re
     AjouterDossierComponent,
     ViewPersonComponent,
     ViewResearchComponent,
+    TransactionHistoriqueComponent,
+    AddAdminComponent,
   ],
   imports: [
     BrowserModule,

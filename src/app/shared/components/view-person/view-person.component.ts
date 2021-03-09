@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
+import {TransactionService} from '../../services/transaction.service';
 
 
 @Component({
@@ -21,9 +21,10 @@ export class ViewPersonComponent implements OnInit {
   images: any;
   viewImage: boolean;
   viewHistoriqueTransactions: boolean;
+  montant: number;
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private ts: TransactionService) { }
 
   ngOnInit(): void {
     this.imageControllerPath = 'http://localhost:8080/image/' + this.person.id;
@@ -68,5 +69,12 @@ export class ViewPersonComponent implements OnInit {
 
   transactionsHistorique() {
     this.viewHistoriqueTransactions = true;
+  }
+
+  verserTransaction(id: number) {
+    this.ts.verserTransaction(this.person.id, id, this.montant).subscribe((result) =>{
+      console.log(result);
+    });
+
   }
 }
