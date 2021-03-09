@@ -20,6 +20,7 @@ export class ViewPersonComponent implements OnInit {
   prenomDonneur: string;
   images: any;
   viewImage: boolean;
+  viewHistoriqueTransactions: boolean;
 
 
   constructor(private http: HttpClient) { }
@@ -63,5 +64,9 @@ export class ViewPersonComponent implements OnInit {
 
   viewImages() {
     this.viewImage = true;
+  }
+
+  transactionsHistorique() {
+    this.viewHistoriqueTransactions = true;
   }
 }

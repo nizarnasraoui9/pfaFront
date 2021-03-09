@@ -102,6 +102,9 @@
         <div class="col-sm">
           <button (click)="viewImages()" type="button" class="btn btn-primary">Afficher les Images</button>
         </div>
+        <div class="col-sm">
+          <button id="myForm" (click)="transactionsHistorique()" type="file" class="btn btn-primary" (change)="postMethod($event.target.files)">Historique des transactions</button>
+        </div>
       </div>
     </div>
     <br>
@@ -145,4 +148,8 @@
 
 <div *ngIf="viewImage">
   <img src="assets/img_lights.jpg" class="img-fluid" alt="Responsive image">
+</div>
+
+<div *ngIf="viewHistoriqueTransactions">
+
 </div>
