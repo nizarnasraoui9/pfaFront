@@ -77,4 +77,6 @@ export class ViewPersonComponent implements OnInit {
     });
 
   }
+
+
 }

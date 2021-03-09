@@ -38,10 +38,9 @@ export class RechercheComponent implements OnInit {
 
 
   }
+
+  returnToSearch() {
+    location.reload();
+  }
 }
- /*
- localhost:8080/recherche/ali/ali
 
- __proto__:
-
-  */

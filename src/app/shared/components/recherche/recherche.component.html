@@ -31,3 +31,4 @@
   <app-view-person [person]="this.selectedPerson"></app-view-person>
 </div>
 
+<button *ngIf="result" (click)="returnToSearch()" type="button" class="btn btn-outline-success">Nouvelle recherche</button>
