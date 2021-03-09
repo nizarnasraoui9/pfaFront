@@ -72,6 +72,24 @@
           <td>{{person.rib}}</td>
         </tbody>
       </table>
+      <table class="table">
+        <thead>
+        <tr *ngFor="let i of parrain">
+          <th scope="col">Nom du donneur</th>
+          <th scope="col">Prenom du donneur</th>
+          <th scope="col">CIN du donneur</th>
+          <th scope="col">telephone du donneur</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>{{i.nom}}</td>
+          <td>{{i.prenom}}</td>
+          <td>{{i.cin}}</td>
+          <td>{{i.telephone}}</td>
+        </tbody>
+      </table>
     </div>
 
     <div class="container">
