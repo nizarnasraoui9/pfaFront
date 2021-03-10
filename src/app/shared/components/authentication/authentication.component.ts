@@ -24,6 +24,7 @@ export class AuthenticationComponent implements OnInit {
     console.log(path);
     const obs = this.http.get(path);
     obs.subscribe((response) => {
+      console.log(response);
       if (response === true){
         this.router.navigate(['/main'], { queryParams: {} });
       }
