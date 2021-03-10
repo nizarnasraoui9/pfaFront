@@ -30,7 +30,6 @@ export class ViewPersonComponent implements OnInit {
     this.imageControllerPath = 'http://localhost:8080/image/' + this.person.id;
     this.parrainPath = 'http://localhost:8080/veuve/' + this.person.id + '/parrains';
     console.log(this.parrainPath);
-    let tab: object[];
     let path: string;
     path = this.parrainPath;
     let obs = this.http.get(path);
