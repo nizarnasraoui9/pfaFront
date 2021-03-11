@@ -22,13 +22,22 @@ export class ViewPersonComponent implements OnInit {
   viewImage: boolean;
   viewHistoriqueTransactions: boolean;
   montant: number;
+  typePersonne: string;
+  veuve: boolean;
 
 
   constructor(private http: HttpClient, private ts: TransactionService) { }
 
   ngOnInit(): void {
+    if (this.person.dateDecesMari == undefined){
+      this.typePersonne = 'orphelin';
+    }
+    else{
+      this.typePersonne = 'veuve';
+      this.veuve == true;
+    }
     this.imageControllerPath = 'http://localhost:8080/image/' + this.person.id;
-    this.parrainPath = 'http://localhost:8080/veuve/' + this.person.id + '/parrains';
+    this.parrainPath = 'http://localhost:8080/' + this.typePersonne + '/' + this.person.id + '/parrains';
     console.log(this.parrainPath);
     let path: string;
     path = this.parrainPath;
@@ -36,14 +45,17 @@ export class ViewPersonComponent implements OnInit {
     obs.subscribe((response) => {
       this.parrain = response;
       this.parrain = this.parrain._embedded.parrain;
+      console.log(this.parrain);
     });
+
+  }
+  uploadImage(): any {
     this.http.get('http://localhost:8080/veuve/1/images').subscribe(response => {
       this.images = response;
       this.images = this.images._embedded;
+      this.imagePressed = true;
     });
-  }
-  uploadImage(): any {
-    this.imagePressed = true;
+
   }
 
 
@@ -58,7 +70,7 @@ export class ViewPersonComponent implements OnInit {
   ajouterDonneur() {
     let path: string = 'http://localhost:8080/addParrain/' + this.nomDonneur + '/' + this.prenomDonneur + '/' + this.person.id;
     this.http.post<any>(path, null).subscribe(response =>  {
-      console.log(response);
+      console.log(this.person.id);
     });
   }
 
@@ -71,8 +83,8 @@ export class ViewPersonComponent implements OnInit {
   }
 
   verserTransaction(id: number) {
-    this.ts.verserTransaction(this.person.id, id, this.montant).subscribe((result) =>{
-      console.log(result);
+    this.ts.verserTransaction(id, this.person.id, this.montant).subscribe((result) =>{
+      console.log(id);
     });
 
   }
