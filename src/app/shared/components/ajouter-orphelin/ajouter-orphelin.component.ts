@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Veuve} from '../../models/Veuve';
 import {HttpClient} from '@angular/common/http';
 import {Orphelin} from '../../models/Orphelin';
+import {OrphelinService} from '../../services/orphelin.service';
 
 @Component({
   selector: 'app-ajouter-orphelin',
@@ -35,13 +36,14 @@ export class AjouterOrphelinComponent implements OnInit {
   sexe: string;
   situationConjugale: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private orphelinService: OrphelinService) { }
 
   ngOnInit(): void {
 
   }
   submit() {
     let orphelin: Orphelin = {
+      matricule: 0,
       cin : this.cin,
       dateOuvertureDossier: this.anneeOuverture + '-' + this.moisOuverture + '-' + this.jourOuverture ,
       nom: this.nom,
@@ -59,11 +61,9 @@ export class AjouterOrphelinComponent implements OnInit {
       sexe: this.sexe,
       situationConjugale: this.situationConjugale
     };
-
-    this.http.post<any>('http://localhost:8080/orphelin', orphelin)
-      .subscribe(response => {
-        console.log(response);
-      });
+    this.orphelinService.addOrphelin(orphelin).subscribe((response) => {
+      window.alert('orphelin ajouté!');
+    });
 
   }
 }

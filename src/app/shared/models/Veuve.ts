@@ -1,5 +1,5 @@
 export class Veuve{
-
+  matricule: number;
   cin: number;
   dateOuvertureDossier: string;
   nom: string;

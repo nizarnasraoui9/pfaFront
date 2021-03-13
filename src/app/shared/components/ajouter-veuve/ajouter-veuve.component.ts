@@ -1,6 +1,7 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {Veuve} from '../../models/Veuve';
+import {VeuveService} from '../../services/veuve.service';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
@@ -40,14 +41,16 @@ export class AjouterVeuveComponent implements OnInit {
   jourOuverture: string;
   moisOuverture: string;
   anneeOuverture: string;
+  matricule: number;
 
-  constructor(private http: HttpClient) { }
+  constructor(private veuveService: VeuveService) { }
 
   ngOnInit(): void {
   }
 
   submit() {
     let veuve: Veuve = {
+      matricule: this.matricule,
       cin : this.cin,
       dateOuvertureDossier: this.anneeOuverture + '-' + this.moisOuverture + '-' + this.jourOuverture ,
       nom: this.nom,
@@ -68,9 +71,8 @@ export class AjouterVeuveComponent implements OnInit {
       dateDecesMari: this.anneeDeces + '-' + this.moisDeces + '-' + this.jourDeces
     };
 
-    this.http.post<any>('http://localhost:8080/veuve', veuve)
-    .subscribe(response => {
-      console.log(response);
+    this.veuveService.addVeuve(veuve).subscribe((response) => {
+      window.alert('Veuve ajouté! ajouter maintenant ses fils!');
     });
 
   }

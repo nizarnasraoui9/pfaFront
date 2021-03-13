@@ -1,4 +1,5 @@
 export interface Orphelin {
+  matricule: number;
   cin: number;
   dateOuvertureDossier: string;
   nom: string;
