@@ -22,6 +22,8 @@ import { ViewPersonComponent } from './shared/components/view-person/view-person
 import { ViewResearchComponent } from './shared/components/view-research/view-research.component';
 import { TransactionHistoriqueComponent } from './shared/components/transaction-historique/transaction-historique.component';
 import { AddAdminComponent } from './shared/components/add-admin/add-admin.component';
+import { ModificationComponent } from './shared/components/modification/modification.component';
+import { ModifyPersonComponent } from './shared/components/modify-person/modify-person.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { AddAdminComponent } from './shared/components/add-admin/add-admin.compo
     ViewResearchComponent,
     TransactionHistoriqueComponent,
     AddAdminComponent,
+    ModificationComponent,
+    ModifyPersonComponent,
   ],
   imports: [
     BrowserModule,

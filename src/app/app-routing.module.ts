@@ -9,6 +9,7 @@ import {AjouterDossierComponent} from './shared/components/ajouter-dossier/ajout
 import {AddAdminComponent} from './shared/components/add-admin/add-admin.component';
 import {AjouterOrphelinComponent} from './shared/components/ajouter-orphelin/ajouter-orphelin.component';
 import {AjouterVeuveComponent} from './shared/components/ajouter-veuve/ajouter-veuve.component';
+import {ModificationComponent} from './shared/components/modification/modification.component';
 
 const routes: Routes = [
   {path: 'signIn', component: AuthenticationComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
         ]},
       {path: 'body', component: BodyComponent},
       {path: 'recherche', component: RechercheComponent},
+      {path: 'modification', component: ModificationComponent},
       {path: 'ajouterDonneur', component: AjouterDonneurComponent},
       {path: 'ajouterAdmin', component: AddAdminComponent}]
   },
