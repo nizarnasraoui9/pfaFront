@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {RechercheDossierService} from '../../services/recherche-dossier.service';
 
 @Component({
   selector: 'app-recherche',
@@ -13,25 +14,21 @@ export class RechercheComponent implements OnInit {
   viewSearch: boolean;
   viewResult: boolean;
   selectedPerson: object;
+  matricule: number;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private rechercheDossierService: RechercheDossierService) { }
 
   ngOnInit(): void {
     this.viewSearch = true;
   }
 
-  search() {
-    let tab: object[];
-    let path: string;
-    path = 'http://localhost:8080/recherche/' + this.nom + '/' + this.prenom;
-    let obs = this.http.get(path);
-    obs.subscribe((response) => {
+  searchByNomAdnPrenom(): any {
+    this.rechercheDossierService.searchByNomAndPrenom(this.nom,this.prenom).subscribe((response)=>{
       this.result = response;
     });
-
   }
 
-  viewPerson(i: object) {
+  viewPerson(i: object): any {
     this.viewSearch = false;
     this.selectedPerson = i;
     this.viewResult = true;
@@ -39,8 +36,15 @@ export class RechercheComponent implements OnInit {
 
   }
 
-  returnToSearch() {
+  returnToSearch(): any {
     location.reload();
+  }
+
+  searchMatricule() {
+    this.rechercheDossierService.searchByMatricule(this.matricule).subscribe((response) => {
+      console.log(response);
+      this.result = response;
+    });
   }
 }
 

@@ -11,7 +11,7 @@ export class VeuveService {
   constructor(private http: HttpClient) { }
 
   addVeuve(veuve: Veuve): Observable<any>{
-    return this.http.post<any>('http://localhost:8080/veuve', veuve);
+    return this.http.post<Veuve>('http://localhost:8080/veuve', veuve);
   }
 
 }

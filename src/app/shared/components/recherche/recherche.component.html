@@ -1,14 +1,20 @@
 <div *ngIf="viewSearch">
+  <h5>Recherche Par Nom et Prenom</h5><br>
   <form class="form-inline my-2 my-lg-0">
     <input name="nom" [(ngModel)]="nom" class="form-control mr-sm-2" type="search" placeholder="Nom" aria-label="Search">
     <input name="prenom" [(ngModel)]="prenom" class="form-control mr-sm-2" type="search" placeholder="Prenom" aria-label="Search">
-    <button (click)="search()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
+    <button (click)="searchByNomAdnPrenom()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
+  </form><br>
+  <h5>Recherche Par Matricule</h5><br>
+  <form class="form-inline my-2 my-lg-0">
+    <input name="matricule" [(ngModel)]="matricule" class="form-control mr-sm-2" type="search" placeholder="Numéro du matricule" aria-label="Search">
+    <button (click)="searchMatricule()" class="btn btn-outline-success my-2 my-sm-0" type="submit">Chercher</button>
   </form><br>
   <div *ngIf="result">
     <table class="table">
       <thead>
       <tr>
-        <th scope="col">ID</th>
+        <th scope="col">Maricule</th>
         <th scope="col">Nom</th>
         <th scope="col">Prenom</th>
         <th scope="col">CIN</th>
@@ -17,7 +23,7 @@
       </thead>
       <tbody>
       <tr *ngFor="let i of this.result">
-        <th scope="row">{{i.id}}</th>
+        <th scope="row">{{i.matricule}}</th>
         <td>{{i.nom}}</td>
         <td>{{i.prenom}}</td>
         <td>{{i.cin}}</td>

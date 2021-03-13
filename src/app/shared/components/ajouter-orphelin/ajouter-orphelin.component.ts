@@ -42,7 +42,7 @@ export class AjouterOrphelinComponent implements OnInit {
   }
   submit() {
     let orphelin: Orphelin = {
-      matricule: 0,
+      matricule: this.matriculeMother,
       cin : this.cin,
       dateOuvertureDossier: this.anneeOuverture + '-' + this.moisOuverture + '-' + this.jourOuverture ,
       nom: this.nom,
