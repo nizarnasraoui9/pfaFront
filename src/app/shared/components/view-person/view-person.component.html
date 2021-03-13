@@ -73,6 +73,8 @@
           <td>{{person.rib}}</td>
         </tbody>
       </table>
+
+      <!--
     </div>
     <table *ngFor="let i of parrain" class="table">
       <thead>
@@ -102,16 +104,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">
-            <button id="myForm" (click)="uploadImage()" type="file" class="btn btn-primary" (change)="postMethod($event.target.files)">Ajouter Une Image</button>
-        </div>
-        <div class="col-sm">
-          <button (click)="addDonneurPressed()" type="button" class="btn btn-primary">Ajouter Un Donneur</button>
-        </div>
-        <div class="col-sm">
-          <button (click)="viewImages()" type="button" class="btn btn-primary">Afficher les Images</button>
-        </div>
-        <div class="col-sm">
-          <button id="myForm" (click)="transactionsHistorique()" type="file" class="btn btn-primary" (change)="postMethod($event.target.files)">Historique des transactions</button>
+            <button id="myForm" (click)="uploadImage()" type="file" class="btn btn-primary" (change)="addImage($event.target.files)">Ajouter Une Image</button>
         </div>
       </div>
     </div>
@@ -122,7 +115,7 @@
   </form>
 </div>
 
-<div *ngIf="ajouterDonneurPressed">
+<div>
   <div class="row">
     <div class="col-sm-10">
       <div class="card">
@@ -130,16 +123,16 @@
           <form>
             <div class="row">
               <div class="col">
-                <label>Nom</label> <input name="nomDonneur" [(ngModel)]="nomDonneur" type="text" class="form-control" >
+                <label>Nom</label> <input name="nomDonneur" [(ngModel)]="nomParrain" type="text" class="form-control" >
               </div>
               <div class="col">
-                <label>Prenom</label> <input name="prenomDonneur"[(ngModel)]="prenomDonneur" type="text" class="form-control" >
+                <label>Prenom</label> <input name="prenomDonneur"[(ngModel)]="prenomParrain" type="text" class="form-control" >
                 <br>
               </div>
               <div class="container">
                 <div class="row">
                   <div class="col-sm">
-                    <button (click)="ajouterDonneur()" type="button" class="btn btn-primary">Ajouter Un Donneur</button>
+                    <button (click)="ajouterParrain()" type="button" class="btn btn-primary">Ajouter Un Donneur</button>
                   </div>
                 </div>
               </div>
@@ -154,11 +147,11 @@
 </div>
 
 
-<div *ngIf="viewImage">
+<div>
   <img src="assets/img_lights.jpg" class="img-fluid" alt="Responsive image">
 </div>
 
-<div *ngIf="viewHistoriqueTransactions">
   <app-transaction-historique [personId]="this.person.id"></app-transaction-historique>
-</div>
 
+
+-->

@@ -11,12 +11,10 @@ export class AjouterDossierComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.viewVeuve= true;
   }
 
-  addVeuve() {
-    this.viewVeuve = true;
-    this.viewOrphelin = false;
-  }
+
 
   addOrphelin() {
     this.viewOrphelin = true;

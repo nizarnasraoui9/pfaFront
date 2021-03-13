@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {TransactionService} from '../../services/transaction.service';
+import {ImageService} from '../../services/image.service';
 
 
 @Component({
@@ -11,22 +12,18 @@ import {TransactionService} from '../../services/transaction.service';
 export class ViewPersonComponent implements OnInit {
   @Input() person: any;
   imageControllerPath: string;
-  private fileToUpload: any;
   imagePressed: boolean;
-  ajouterDonneurPressed: boolean;
   parrainPath: string ;
   parrain: any;
-  nomDonneur: string;
-  prenomDonneur: string;
+  nomParrain: string;
+  prenomParrain: string;
   images: any;
-  viewImage: boolean;
-  viewHistoriqueTransactions: boolean;
   montant: number;
   typePersonne: string;
   veuve: boolean;
 
 
-  constructor(private http: HttpClient, private ts: TransactionService) { }
+  constructor(private http: HttpClient, private ts: TransactionService, private imageService: ImageService) { }
 
   ngOnInit(): void {
     if (this.person.dateDecesMari == undefined){
@@ -59,28 +56,20 @@ export class ViewPersonComponent implements OnInit {
   }
 
 
-  postMethod(files: FileList) {this.fileToUpload = files.item(0); const formData = new FormData(); formData.append('imageFile', this.fileToUpload, this.fileToUpload.name); this.http.post(this.imageControllerPath, formData).subscribe((val) => {
-    console.log(val);
-  });
-                               return false; }
-  addDonneurPressed() {
-    this.ajouterDonneurPressed = true;
+  addImage(files: FileList) {
+    this.imageService.addImage(files);
   }
 
-  ajouterDonneur() {
-    let path: string = 'http://localhost:8080/addParrain/' + this.nomDonneur + '/' + this.prenomDonneur + '/' + this.person.id;
+
+  ajouterParrain() {
+    let path: string = 'http://localhost:8080/addParrain/' + this.nomParrain + '/' + this.prenomParrain + '/' + this.person.id;
     this.http.post<any>(path, null).subscribe(response =>  {
       console.log(this.person.id);
     });
   }
 
-  viewImages() {
-    this.viewImage = true;
-  }
 
-  transactionsHistorique() {
-    this.viewHistoriqueTransactions = true;
-  }
+
 
   verserTransaction(id: number) {
     this.ts.verserTransaction(id, this.person.id, this.montant).subscribe((result) =>{
