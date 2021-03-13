@@ -2,6 +2,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {Veuve} from '../../models/Veuve';
 import {VeuveService} from '../../services/veuve.service';
+import {Router} from '@angular/router';
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type':  'application/json',
@@ -43,7 +44,7 @@ export class AjouterVeuveComponent implements OnInit {
   anneeOuverture: string;
   matricule: number;
 
-  constructor(private veuveService: VeuveService) { }
+  constructor(private veuveService: VeuveService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -73,6 +74,8 @@ export class AjouterVeuveComponent implements OnInit {
 
     this.veuveService.addVeuve(veuve).subscribe((response) => {
       window.alert('Veuve ajouté! ajouter maintenant ses fils!');
+      this.router.navigate(['/main/ajouterDossier/ajouterOrphelin'], { queryParams: {matriculeMother: this.matricule} });
+
     });
 
   }

@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Veuve} from '../../models/Veuve';
-import {HttpClient} from '@angular/common/http';
 import {Orphelin} from '../../models/Orphelin';
 import {OrphelinService} from '../../services/orphelin.service';
 
@@ -37,6 +35,7 @@ export class AjouterOrphelinComponent implements OnInit {
   situationConjugale: string;
 
   constructor(private orphelinService: OrphelinService) { }
+  matriculeMother: number;
 
   ngOnInit(): void {
 
@@ -62,7 +61,8 @@ export class AjouterOrphelinComponent implements OnInit {
       situationConjugale: this.situationConjugale
     };
     this.orphelinService.addOrphelin(orphelin).subscribe((response) => {
-      window.alert('orphelin ajouté!');
+      window.alert('orphelin ajouté!ajouter son frère si vous voulez');
+      location.reload();
     });
 
   }
