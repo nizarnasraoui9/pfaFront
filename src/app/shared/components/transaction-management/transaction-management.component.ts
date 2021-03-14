@@ -56,19 +56,20 @@ export class TransactionManagementComponent implements OnInit {
   }
 
 
-  addImage(files: FileList) {
+  addImage(files: FileList): any {
     this.imageService.addImage(files);
   }
 
 
-  ajouterParrain() {
+  ajouterParrain(): any {
     let path: string = 'http://localhost:8080/addParrain/' + this.nomParrain + '/' + this.prenomParrain + '/' + this.person.id;
-    this.http.post<any>(path, null).subscribe(response => {
-      console.log(this.person.id);
+    this.http.post<any>(path, null).subscribe(() => {
+      window.alert('Garant ajouté avec succès!');
     });
   }
   verserTransaction(idParrain: number): any {
     this.ts.verserTransaction(idParrain, this.person.id, this.montant).subscribe(() => {
+      window.alert('Transaction ajouté avec succès!');
     });
   }
 }

@@ -52,11 +52,8 @@ export class ViewPersonComponent implements OnInit {
       this.images = this.images._embedded;
       this.imagePressed = true;
     });
-
   }
-
-
-  addImage(files: FileList) {
+  addImage(files: FileList): any{
     this.imageService.addImage(files);
   }
 
