@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Orphelin} from '../../models/Orphelin';
 import {OrphelinService} from '../../services/orphelin.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-ajouter-orphelin',
@@ -8,6 +9,7 @@ import {OrphelinService} from '../../services/orphelin.service';
   styleUrls: ['./ajouter-orphelin.component.css']
 })
 export class AjouterOrphelinComponent implements OnInit {
+  matriculeMother: number;
   nom: string;
   prenom: string;
   dateDeNaissance: string;
@@ -34,10 +36,12 @@ export class AjouterOrphelinComponent implements OnInit {
   sexe: string;
   situationConjugale: string;
 
-  constructor(private orphelinService: OrphelinService) { }
-  matriculeMother: number;
+  constructor(private orphelinService: OrphelinService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {
+      this.matriculeMother = params['matriculeMother'];
+    });
     console.log(this.matriculeMother);
 
   }

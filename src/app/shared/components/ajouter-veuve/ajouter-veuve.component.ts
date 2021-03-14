@@ -1,14 +1,8 @@
-import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import {Veuve} from '../../models/Veuve';
 import {VeuveService} from '../../services/veuve.service';
 import {Router} from '@angular/router';
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-    Authorization: 'my-auth-token'
-  })
-};
+
 @Component({
   selector: 'app-ajouter-veuve',
   templateUrl: './ajouter-veuve.component.html',
