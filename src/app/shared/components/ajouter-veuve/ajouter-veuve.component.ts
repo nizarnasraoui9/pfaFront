@@ -43,6 +43,9 @@ export class AjouterVeuveComponent implements OnInit {
   moisOuverture: string;
   anneeOuverture: string;
   matricule: number;
+  sexe: string;
+  situationConjugale: string;
+
 
   constructor(private veuveService: VeuveService, private router: Router) { }
 

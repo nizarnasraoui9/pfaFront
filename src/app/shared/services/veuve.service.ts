@@ -13,5 +13,8 @@ export class VeuveService {
   addVeuve(veuve: Veuve): Observable<any>{
     return this.http.post<Veuve>('http://localhost:8080/veuve', veuve);
   }
+  modifyVeuve(veuve: any): Observable<any>{
+    return this.http.put<Veuve>('http://localhost:8080/veuve/' + veuve.id , veuve);
+  }
 
 }

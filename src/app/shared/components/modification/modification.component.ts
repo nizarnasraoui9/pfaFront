@@ -22,18 +22,10 @@ export class ModificationComponent implements OnInit {
     this.viewSearch = true;
   }
 
-  searchByNomAdnPrenom(): any {
-    this.rechercheDossierService.searchByNomAndPrenom(this.nom,this.prenom).subscribe((response)=>{
-      this.result = response;
-    });
-  }
-
   viewPerson(i: object): any {
     this.viewSearch = false;
     this.selectedPerson = i;
     this.viewResult = true;
-
-
   }
 
   returnToSearch(): any {
@@ -42,7 +34,6 @@ export class ModificationComponent implements OnInit {
 
   searchMatricule() {
     this.rechercheDossierService.searchByMatricule(this.matricule).subscribe((response) => {
-      console.log(response);
       this.result = response;
     });
   }

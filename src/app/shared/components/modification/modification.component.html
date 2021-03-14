@@ -21,14 +21,15 @@
         <td>{{i.nom}}</td>
         <td>{{i.prenom}}</td>
         <td>{{i.cin}}</td>
-        <td><button (click)="viewPerson(i)" type="button" class="btn btn-link">Modifier</button> </td>     </tr>
+        <td><button (click)="viewPerson(i)" type="button" class="btn btn-link">Modifier</button> </td>
+      </tr>
       </tbody>
     </table>
   </div>
 </div>
 
 <div *ngIf="viewResult">
-  <app-modify-person> [person]="this.selectedPerson"></app-modify-person>
+  <app-modify-person [person]="this.selectedPerson"></app-modify-person>
 </div>
 
 <button *ngIf="result" (click)="returnToSearch()" type="button" class="btn btn-outline-success">Nouvelle recherche</button>
