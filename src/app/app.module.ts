@@ -24,6 +24,7 @@ import { TransactionHistoriqueComponent } from './shared/components/transaction-
 import { AddAdminComponent } from './shared/components/add-admin/add-admin.component';
 import { ModificationComponent } from './shared/components/modification/modification.component';
 import { ModifyPersonComponent } from './shared/components/modify-person/modify-person.component';
+import { TransactionManagementComponent } from './shared/components/transaction-management/transaction-management.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ModifyPersonComponent } from './shared/components/modify-person/modify-
     AddAdminComponent,
     ModificationComponent,
     ModifyPersonComponent,
+    TransactionManagementComponent,
   ],
   imports: [
     BrowserModule,

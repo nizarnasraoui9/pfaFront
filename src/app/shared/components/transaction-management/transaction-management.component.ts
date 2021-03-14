@@ -3,17 +3,16 @@ import {HttpClient} from '@angular/common/http';
 import {TransactionService} from '../../services/transaction.service';
 import {ImageService} from '../../services/image.service';
 
-
 @Component({
-  selector: 'app-view-person',
-  templateUrl: './view-person.component.html',
-  styleUrls: ['./view-person.component.css']
+  selector: 'app-transaction-management',
+  templateUrl: './transaction-management.component.html',
+  styleUrls: ['./transaction-management.component.css']
 })
-export class ViewPersonComponent implements OnInit {
+export class TransactionManagementComponent implements OnInit {
   @Input() person: any;
   imageControllerPath: string;
   imagePressed: boolean;
-  parrainPath: string ;
+  parrainPath: string;
   parrain: any;
   nomParrain: string;
   prenomParrain: string;
@@ -23,13 +22,13 @@ export class ViewPersonComponent implements OnInit {
   veuve: boolean;
 
 
-  constructor(private http: HttpClient, private ts: TransactionService, private imageService: ImageService) { }
+  constructor(private http: HttpClient, private ts: TransactionService, private imageService: ImageService) {
+  }
 
   ngOnInit(): void {
-    if (this.person.dateDecesMari === undefined){
+    if (this.person.dateDecesMari === undefined) {
       this.typePersonne = 'orphelin';
-    }
-    else{
+    } else {
       this.typePersonne = 'veuve';
       this.veuve = true;
     }
@@ -46,6 +45,7 @@ export class ViewPersonComponent implements OnInit {
     });
 
   }
+
   uploadImage(): any {
     this.http.get('http://localhost:8080/veuve/1/images').subscribe(response => {
       this.images = response;
@@ -63,18 +63,14 @@ export class ViewPersonComponent implements OnInit {
 
   ajouterParrain() {
     let path: string = 'http://localhost:8080/addParrain/' + this.nomParrain + '/' + this.prenomParrain + '/' + this.person.id;
-    this.http.post<any>(path, null).subscribe(response =>  {
+    this.http.post<any>(path, null).subscribe(response => {
       console.log(this.person.id);
     });
   }
-
-
-
-
   verserTransaction(idParrain: number): any {
     this.ts.verserTransaction(idParrain, this.person.id, this.montant).subscribe(() => {
     });
   }
-
-
 }
+
+
