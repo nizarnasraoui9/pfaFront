@@ -36,7 +36,6 @@ export class ModifyPersonComponent implements OnInit {
   anneeOuverture: string;
   matricule: number;
   imageControllerPath: string;
-  imagePressed: boolean;
   parrainPath: string ;
   parrain: any;
   nomParrain: string;
@@ -73,11 +72,11 @@ export class ModifyPersonComponent implements OnInit {
     });
 
   }
-  uploadImage(): any {
+
+  uploadImage(files: any): any {
     this.http.get('http://localhost:8080/veuve/1/images').subscribe(response => {
       this.images = response;
       this.images = this.images._embedded;
-      this.imagePressed = true;
     });
 
   }
@@ -172,5 +171,7 @@ export class ModifyPersonComponent implements OnInit {
       }
       }
     }
+
+
   }
 

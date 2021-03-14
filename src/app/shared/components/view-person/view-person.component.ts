@@ -26,12 +26,12 @@ export class ViewPersonComponent implements OnInit {
   constructor(private http: HttpClient, private ts: TransactionService, private imageService: ImageService) { }
 
   ngOnInit(): void {
-    if (this.person.dateDecesMari == undefined){
+    if (this.person.dateDecesMari === undefined){
       this.typePersonne = 'orphelin';
     }
     else{
       this.typePersonne = 'veuve';
-      this.veuve == true;
+      this.veuve = true;
     }
     this.imageControllerPath = 'http://localhost:8080/image/' + this.person.id;
     this.parrainPath = 'http://localhost:8080/' + this.typePersonne + '/' + this.person.id + '/parrains';

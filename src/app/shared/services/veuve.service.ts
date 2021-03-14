@@ -16,5 +16,4 @@ export class VeuveService {
   modifyVeuve(veuve: any): Observable<any>{
     return this.http.put<Veuve>('http://localhost:8080/veuve/' + veuve.id , veuve);
   }
-
 }

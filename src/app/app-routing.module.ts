@@ -10,6 +10,7 @@ import {AddAdminComponent} from './shared/components/add-admin/add-admin.compone
 import {AjouterOrphelinComponent} from './shared/components/ajouter-orphelin/ajouter-orphelin.component';
 import {AjouterVeuveComponent} from './shared/components/ajouter-veuve/ajouter-veuve.component';
 import {ModificationComponent} from './shared/components/modification/modification.component';
+import {TransactionComponent} from './shared/components/transaction/transaction.component';
 
 const routes: Routes = [
   {path: 'signIn', component: AuthenticationComponent},
@@ -24,7 +25,7 @@ const routes: Routes = [
       {path: 'recherche', component: RechercheComponent},
       {path: 'modification', component: ModificationComponent},
       {path: 'ajouterDonneur', component: AjouterDonneurComponent},
-      {path: 'ajouterAdmin', component: AddAdminComponent}]
+      {path: 'transaction', component: TransactionComponent}]
   },
   {path: '', redirectTo: 'signIn', pathMatch: 'full'}
 

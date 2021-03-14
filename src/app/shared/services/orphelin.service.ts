@@ -14,6 +14,6 @@ export class OrphelinService {
     return this.http.post<any>('http://localhost:8080/orphelin', orphelin);
   }
   modifyOrphelin(orphelin: any): Observable<any>{
-    return this.http.put<Orphelin>('http://localhost:8080/veuve/' + orphelin.id , orphelin);
+    return this.http.put<Orphelin>('http://localhost:8080/orphelin/' + orphelin.id , orphelin);
   }
 }
