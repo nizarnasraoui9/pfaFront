@@ -38,6 +38,7 @@ export class AjouterOrphelinComponent implements OnInit {
   matriculeMother: number;
 
   ngOnInit(): void {
+    console.log(this.matriculeMother);
 
   }
   submit() {

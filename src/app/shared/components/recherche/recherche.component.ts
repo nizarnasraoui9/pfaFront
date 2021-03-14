@@ -40,7 +40,7 @@ export class RechercheComponent implements OnInit {
     location.reload();
   }
 
-  searchMatricule() {
+  searchMatricule(): any {
     this.rechercheDossierService.searchByMatricule(this.matricule).subscribe((response) => {
       console.log(response);
       this.result = response;
