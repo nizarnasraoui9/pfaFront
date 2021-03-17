@@ -6,9 +6,10 @@
 <br>
 <div class="wrapper fadeInDown">
   <div id="formContent">
-    <form>
+    <form><br>
+      <h5>Authentification</h5><br>
       <input [(ngModel)]="username" type="text" id="username"  class="fadeIn second" name="username" placeholder="Nom d'utilisateur">
-      <input [(ngModel)]="password" type="text" id="password" class="fadeIn third" name="password" placeholder="Mot de passe">
+      <input [(ngModel)]="password" type="text" id="password" class="fadeIn third" name="password" placeholder="Mot de passe"><br><br>
       <input type="button" class="fadeIn fourth" value="Se connecter" (click)="signIn()">
         <div *ngIf="error" class="alert alert-danger" role="alert">
           Verifier vos paramètres
