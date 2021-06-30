@@ -1,0 +1,161 @@
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Matricule</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">CIN</th>
+        <th scope="col">Date de Naissance</th>
+        <th scope="col">Numéro de Tel</th>
+        <th scope="col">Niveau Educatif</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{person.matricule}}</td>
+        <td>{{person.nom}}</td>
+        <td>{{person.prenom}}</td>
+        <td>{{person.cin}}</td>
+        <td>{{person.dateDeNaissance}}</td>
+        <td>{{person.numTel}}</td>
+        <td>{{person.niveauScolaire}}</td>
+      </tbody>
+    </table>
+    <br>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Adresse</th>
+        <th scope="col">Info Travail</th>
+        <th scope="col">revenue Monsuel</th>
+        <th scope="col">Montant d'Aide Monsuelle</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{person.adresse}}</td>
+        <td>{{person.infoTravail}}</td>
+        <td>{{person.revenueMonsuel}}</td>
+        <td>{{person.montantAideMonsuelle}}</td>
+      </tbody>
+    </table>
+    <br>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Situation Sanitaire</th>
+        <th scope="col">Couverture Sociale</th>
+        <th scope="col">Cout des Médicaments utilisées</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{person.siutationSanitaire}}</td>
+        <td>{{person.typeCouvertureSociale}}</td>
+        <td>{{person.coutMedicaments}}</td>
+      </tbody>
+    </table>
+    <br>
+
+    <div >
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Nombre d'Enfants</th>
+          <th scope="col">Nombre d'Enfants Pris en Charge</th>
+          <th scope="col">RIB</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>{{person.nombreEnfants}}</td>
+          <td>{{person.nombreEnfantsParrainees}}</td>
+          <td>{{person.rib}}</td>
+        </tbody>
+      </table><br>
+
+      <h5>Les images associés au dossier</h5><br>
+      <div>
+        <img src="assets/img_lights.jpg" class="img-fluid" alt="Responsive image">
+      </div><br>
+      <!--
+    </div>
+    <table *ngFor="let i of parrain" class="table">
+      <thead>
+      <tr >
+        <th scope="col">Nom du donneur</th>
+        <th scope="col">Prenom du donneur</th>
+        <th scope="col">CIN du donneur</th>
+        <th scope="col">Telephone du donneur</th>
+        <th scope="col">Verser une Transaction</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>{{i.nom}}</td>
+        <td>{{i.prenom}}</td>
+        <td>{{i.cin}}</td>
+        <td>{{i.telephone}}</td>
+        <td>
+          <form class="form-inline my-2 my-lg-0">
+            <input name="prenom" [(ngModel)]="montant" class="form-control mr-sm-2" type="search" placeholder="taper le montant ici" aria-label="Search"><br>
+            <button (click)="verserTransaction(i.id)" class="btn btn-outline-success my-2 my-sm-0" type="submit">Verser la transaction</button>
+          </form>
+        </td>
+      </tbody>
+    </table>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+            <button id="myForm" (click)="uploadImage()" type="file" class="btn btn-primary" (change)="addImage($event.target.files)">Ajouter Une Image</button>
+        </div>
+      </div>
+    </div>
+    <br>
+<div *ngIf="imagePressed">
+  <form>
+    <input class="btn btn-primary" id="myForm" type="file" name="imageFile" (change)="postMethod($event.target.files)" value="Ajouter une image">
+  </form>
+</div>
+
+<div>
+  <div class="row">
+    <div class="col-sm-10">
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col">
+                <label>Nom</label> <input name="nomDonneur" [(ngModel)]="nomParrain" type="text" class="form-control" >
+              </div>
+              <div class="col">
+                <label>Prenom</label> <input name="prenomDonneur"[(ngModel)]="prenomParrain" type="text" class="form-control" >
+                <br>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <button (click)="ajouterParrain()" type="button" class="btn btn-primary">Ajouter Un Donneur</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div>
+  <img src="assets/img_lights.jpg" class="img-fluid" alt="Responsive image">
+</div>
+
+  <app-transaction-historique [personId]="this.person.id"></app-transaction-historique>
+
+
+-->

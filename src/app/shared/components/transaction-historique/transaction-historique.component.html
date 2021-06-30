@@ -1,0 +1,26 @@
+<div *ngIf="transaction">
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Nom du Donneur</th>
+      <th scope="col">Prenom du Donneur</th>
+      <th scope="col">CIN du donneur</th>
+      <th scope="col">Telephone du donneur</th>
+      <th scope="col">Montant</th>
+      <th scope="col">date</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let i of transaction">
+      <td>{{i.parrain.nom}}</td>
+      <td>{{i.parrain.prenom}}</td>
+      <td>{{i.parrain.cid}}</td>
+      <td>{{i.parrain.telephone}}</td>
+      <td>{{i.montant}}</td>
+      <td>{{i.date}}</td>
+
+    </tr>
+    </tbody>
+  </table>
+</div>

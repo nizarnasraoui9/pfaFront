@@ -1,0 +1,101 @@
+<div class="row">
+  <div class="col-sm-10">
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <div class="row">
+            <div class="col">
+              <label>Nom de l'Orphelin</label> <input name="nom" [(ngModel)]="nom" type="text" class="form-control" >
+            </div>
+            <div class="col">
+              <label>Prenom</label> <input name="prenom"[(ngModel)]="prenom" type="text" class="form-control" >
+              <br>
+            </div>
+          </div>
+          <p>Date de Naissance</p><br>
+          <div class="row">
+            <div class="col">
+              <label>Jour</label> <input name="jourNaissance" [(ngModel)]="jourNaissance" type="text" class="form-control" >
+            </div>
+            <div class="col">
+              <label>Mois</label> <input name="moisNaissance" [(ngModel)]="moisNaissance" type="text" class="form-control" >
+              <br>
+            </div>
+            <div class="col">
+              <label>Année</label> <input name="anneeNaissance" [(ngModel)]="anneeNaissance" type="text" class="form-control" >
+              <br>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label>Adresse</label> <input name="adresse" [(ngModel)]="adresse" type="text" class="form-control" >
+            </div>
+            <div class="col">
+              <label>Numéro de Tel</label> <input name="numTel" [(ngModel)]="numTel" type="text" class="form-control" >
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col">
+              <label>CIN</label>  <input name="cin" [(ngModel)]="cin" type="text" class="form-control" >
+            </div>
+          </div>
+          <p>Date d'Ouverture du Dossier</p>
+          <div class="row">
+            <div class="col">
+              <label>Jour</label> <input name="jourOuverture" [(ngModel)]="jourOuverture" type="text" class="form-control" >
+            </div>
+            <div class="col">
+              <label>Mois</label> <input name="moisOuverture" [(ngModel)]="moisOuverture" type="text" class="form-control" >
+              <br>
+            </div>
+            <div class="col">
+              <label>Année</label> <input name="anneeOuverture" [(ngModel)]="anneeOuverture" type="text" class="form-control" >
+              <br>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <label>Niveau educatif</label> <input name="niveauScolaire" [(ngModel)]="niveauScolaire"  type="text" class="form-control" >
+            </div>
+            <div class="col">
+              <label>Info Travail</label> <input name="infoTravail" [(ngModel)]="infoTravail"  type="text" class="form-control" >
+            </div>
+            <div class="col">
+              <label>Revenu mensuel</label> <input name="revenueMonsuel" [(ngModel)]="revenueMonsuel"  type="text" class="form-control" >
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col">
+              <label>Montant d'aide monsuelle</label> <input name="montantAideMonsuelle" [(ngModel)]="montantAideMonsuelle"  type="text" class="form-control" >
+            </div>
+            <div class="col">
+              <label>Situation sanitaire</label> <input name="siutationSanitaire" [(ngModel)]="siutationSanitaire"  type="text" class="form-control" >
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col">
+              <label>Type de couverture sociale</label> <input name="typeCouvertureSociale" [(ngModel)]="typeCouvertureSociale"  type="text" class="form-control" >
+            </div>
+            <div class="col">
+              <label>Cout des médicaments</label> <input name="coutMedicaments" [(ngModel)]="coutMedicaments"  type="text" class="form-control" >
+            </div>
+          </div><br>
+          <div class="row">
+            <div class="col">
+              <label>Sexe</label> <input name="sexe" [(ngModel)]="sexe"  type="text" class="form-control" >
+            </div>
+            <div class="col">
+              <label>Situation Conjugale</label> <input name="situationConjugale" [(ngModel)]="situationConjugale"  type="text" class="form-control" >
+            </div>
+          </div><br>
+          <br>
+          <br>
+          <button (click)="submit()" type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+

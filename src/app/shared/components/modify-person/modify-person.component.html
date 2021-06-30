@@ -1,0 +1,133 @@
+<h5>Modification des Données</h5><br>
+<div class="row">
+  <div class="col-sm-10">
+    <div class="card">
+      <div class="card-body">
+        <form>
+          <div class="row">
+            <div class="col">
+              <label>Modifier le numéro de Tel</label> <input name="numTel" [(ngModel)]="numTel" type="text" class="form-control" >
+            </div>
+            <div class="col" id="modifier">
+              <br><input (click)="modifyNumTel()" value="modifier" type="button" class="btn btn-primary">
+            </div>
+          </div><br>
+
+          <div class="row">
+            <div class="col">
+              <label>Modifier l'adresse</label> <input name="adresse" [(ngModel)]="adresse" type="text" class="form-control" >
+            </div>
+            <div class="col" id="modifier">
+              <br><input (click)="modifyAdress()" value="modifier" type="button" class="btn btn-primary">
+            </div>
+          </div><br>
+
+          <div class="row">
+            <div class="col">
+              <label>Modifier l'info travail</label> <input name="infoTravail" [(ngModel)]="infoTravail" type="text" class="form-control" >
+            </div>
+            <div class="col" id="modifier">
+              <br><input (click)="modifyInfoTravail()" value="modifier" type="button" class="btn btn-primary">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <label>Modifier le revenu monsuel</label> <input name="revenueMonsuel" [(ngModel)]="revenueMonsuel" type="text" class="form-control" >
+            </div>
+            <div class="col" id="modifier">
+              <br><input (click)="modifyRevenueMonsuel()" value="modifier" type="button" class="btn btn-primary">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <label>Modifier le niveau Scolaire</label> <input name="niveauScolaire" [(ngModel)]="niveauScolaire" type="text" class="form-control" >
+            </div>
+            <div class="col" id="modifier">
+              <br><input (click)="modifyniveauScolaire()" value="modifier" type="button" class="btn btn-primary">
+            </div>
+          </div>
+          <br>
+          <br>
+          <div class="row">
+            <div class="col">
+              <label>Montant d'aide monsuelle</label> <input name="montantAideMonsuelle" [(ngModel)]="montantAideMonsuelle" type="text" class="form-control" >
+            </div>
+            <div class="col" id="modifier">
+              <br><input (click)="modifyMontantAideMensuelle()" value="modifier" type="button" class="btn btn-primary">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <label>Modifier situation sanitaire</label> <input name="siutationSanitaire" [(ngModel)]="siutationSanitaire" type="text" class="form-control" >
+            </div>
+            <div class="col" id="modifier">
+              <br><input (click)="modifySituationSanitaire()" value="modifier" type="button" class="btn btn-primary">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <label>Modifier le type de couverture sociale</label> <input name="typeCouvertureSociale" [(ngModel)]="typeCouvertureSociale" type="text" class="form-control" >
+            </div>
+            <div class="col" id="modifier">
+              <br><input (click)="modifyTypeCouvertureSociale()" value="modifier" type="button" class="btn btn-primary">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col">
+              <label>Modifier le cout des médicaments</label> <input name="coutMedicaments" [(ngModel)]="coutMedicaments" type="text" class="form-control" >
+            </div>
+            <div class="col" id="modifier">
+              <br><input (click)="modifyCoutMedicaments()" value="modifier" type="button" class="btn btn-primary">
+            </div>
+          </div>
+          <br>
+          <br>
+        </form>
+      </div>
+    </div>
+  </div>
+</div><br>
+  <h5>Ajouter Une Image</h5><br>
+<div>
+  <form>
+    <input class="btn btn-primary" id="myForm" type="file" name="imageFile" (change)="addImage($event.target.files)" value="Ajouter une image">
+  </form>
+</div><br>
+<!--
+<h5>Ajouter Un Parrain</h5><br>
+<div>
+  <div class="row">
+    <div class="col-sm-10">
+      <div class="card">
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col">
+                <label>Nom</label> <input name="nomDonneur" [(ngModel)]="nomParrain" type="text" class="form-control" >
+              </div>
+              <div class="col">
+                <label>Prenom</label> <input name="prenomDonneur"[(ngModel)]="prenomParrain" type="text" class="form-control" >
+                <br>
+              </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <button (click)="ajouterParrain()" type="button" class="btn btn-primary">Ajouter Un Donneur</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><br>
+-->
